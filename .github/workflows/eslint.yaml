@@ -1,0 +1,30 @@
+name: Linting
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  push:
+    branches:
+      - development
+
+env:
+  NODE_ENV: development
+
+jobs:
+  eslint:
+    runs-on: [self-hosted, k8s]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install code
+        run: npm ci
+
+      - name: Run ESLint
+        run: |
+          ./node_modules/eslint/bin/eslint.js *.js

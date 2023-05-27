@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mqtt-to-blynk-weather
+  namespace: prod
+  labels:
+    app: mqtt-to-blynk-weather
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: mqtt-to-blynk-weather
+  template:
+    metadata:
+      labels:
+        app: mqtt-to-blynk-weather
+      annotations:
+        instrumentation.opentelemetry.io/inject-nodejs: "true"
+    spec:
+      # imagePullSecrets:
+      #   - name: registry-ssl2
+      containers:
+        - name: mqtt-to-blynk-weather
+          image: apider/mqtt-to-blynk-weather:latest
+          # image: registry.home:6000/mqtt-to-blynk-weather:latest
+          # image: registry-ssl.home:6000/mqtt-to-blynk-weather:latest
+          imagePullPolicy: Always
+          env:
+            - name: BLYNKTOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: mqtt-to-blynk-weather-secret
+                  key: blynktoken
+      restartPolicy: Always
+      tolerations:
+        - key: "node.kubernetes.io/unreachable"
+          operator: "Exists"
+          effect: "NoExecute"
+          tolerationSeconds: 5

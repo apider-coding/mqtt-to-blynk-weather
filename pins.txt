@@ -1,0 +1,19 @@
+// inne: PINS: temp V5, hum V6, heatindex v7, adjustments: temp -2
+// vinden: PINS: temp V8, hum V9, heatindex v10, adjustments: temp -2.5
+// garage: PINS: temp V11, hum V12, heatindex v13, adjustments: temp -2
+// ute:
+  PINS: 
+    temp V14,
+    hum V15,
+    pressure v16,
+    adjustments: temp -5, hum +10, press +5.5
+    isn V31,
+    flux_10cm V32,
+    Kp V32,
+
+       def pinurl(pin, metric):
+        pinUrl = BLYNK_API_URL + '/' + BLYNK_AUTH + \
+            '/update/' + pin + '?value=' + metric
+        return pinUrl
+
+    Added for this repo - see config/
