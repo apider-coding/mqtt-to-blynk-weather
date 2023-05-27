@@ -12,7 +12,7 @@ env:
 
 jobs:
   eslint:
-    runs-on: [self-hosted, k8s]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
