@@ -8,5 +8,3 @@
 [Change Log](./CHANGELOG.md)
 
 Gets specified topic data (from config) and posts to Blynk Weather app
-
-# test
