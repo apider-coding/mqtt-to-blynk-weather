@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.1.2...v1.1.3) (2023-05-29)
+
+
+### Bug Fixes
+
+* Update README.md ([08d7c50](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/08d7c504ba6b8f5356878c7f539d13ba1e62eabd))
+
+
+
 ## [1.1.2](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.1.1...v1.1.2) (2023-05-29)
 
 
