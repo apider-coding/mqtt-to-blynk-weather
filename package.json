@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "release": "standard-version",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --inspect app.js"
@@ -35,6 +36,7 @@
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.0.1",
     "jsdoc": "^3.6.11",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "standard-version": "^9.5.0"
   }
 }
