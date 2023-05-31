@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.1...v1.0.2) (2023-05-31)
+
+
+### Bug Fixes
+
+* docker multi stage build ([3402701](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/34027018f31c01d10db1a73e98113bc6b5f48230))
+
 ### [1.0.1](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.0...v1.0.1) (2023-05-30)
 
 
