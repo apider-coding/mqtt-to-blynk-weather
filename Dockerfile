@@ -1,17 +1,30 @@
-FROM node:18
+# Get node image via internal Artifactory7 repo
+FROM snode:16 as builder
 
+# Set timezone
 RUN cp -r -f /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 
-# Bundle app source
+
+# Set node env and copy app source
+ENV NODE_ENV=production
 ADD . /app
 WORKDIR /app
 
+# If building your code for production use "ci" to get a consistent build with exact versions every time (from package-lock.json)
+RUN npm ci --omit=dev
+
 # Clean up
-RUN rm -rf doc Dockerfile* requirements* .gitignore .git .vscode manifest* README* Readme* mongodb_create_user* .env
+RUN rm -rf doc Dockerfile* .gitignore .git .vscode .env egress
 
-# If you are building your code for production
-RUN npm ci --only=production
+# Use node user
+USER node
 
-# EXPOSE 8080
+# Multi stage build
+FROM node:16-slim
+USER node
+COPY --from=builder /app /app
+WORKDIR /app
+
+# Entrypoint with OTEL tracing
 CMD [ "node", "app.js" ]
-# CMD [ "node", "-r", "./tracing.js", "app.js" ]
+# CMD [ "node", "-r", "./otel/tracing.js", "server.js" ]
