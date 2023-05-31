@@ -1,5 +1,5 @@
 # Get node image via internal Artifactory7 repo
-FROM snode:16 as builder
+FROM node:18 as builder
 
 # Set timezone
 RUN cp -r -f /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
@@ -20,7 +20,7 @@ RUN rm -rf doc Dockerfile* .gitignore .git .vscode .env egress
 USER node
 
 # Multi stage build
-FROM node:16-slim
+FROM node:18-slim
 USER node
 COPY --from=builder /app /app
 WORKDIR /app
