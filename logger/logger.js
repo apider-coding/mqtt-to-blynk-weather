@@ -10,6 +10,11 @@ const logger = winston.createLogger({
         winston.format.timestamp(),
         winston.format.json(),
       ),
+      // format: winston.format.combine(
+      //   winston.format.timestamp(),
+      //   winston.format.splat(),
+      //   winston.format.simple(),
+      // ),
     })],
 });
 
