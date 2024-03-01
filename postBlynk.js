@@ -20,6 +20,7 @@ const postBlynk = async (url) => {
     return true;
   } catch (err) {
     logger.error({ message: err.message });
+    // logger.error('This is a error message'); // A message could be logged like this as well
     return err;
   }
 };
