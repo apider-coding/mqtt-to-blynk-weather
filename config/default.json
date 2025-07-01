@@ -7,17 +7,17 @@
   },
   "topics": [
     {
-      "name": "433/Hideki-Wind/10/wind_max_km_h",
+      "name": "433/Hideki-Wind/7/wind_max_km_h",
       "description": "windMax",
       "pin": "V20"
     },
     {
-      "name": "433/Hideki-Wind/10/wind_avg_km_h",
+      "name": "433/Hideki-Wind/7/wind_avg_km_h",
       "description": "windAvg",
       "pin": "V21"
     },
     {
-      "name": "433/Hideki-Wind/10/wind_dir_deg",
+      "name": "433/Hideki-Wind/7/wind_dir_deg",
       "description": "windDeg",
       "pin": "V22"
     },
