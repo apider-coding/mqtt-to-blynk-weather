@@ -27,6 +27,11 @@
       "pin": "V23"
     },
     {
+      "name": "433/inFactory-TH/30/temerature_C",
+      "description": "temerature",
+      "pin": "V14"
+    },
+    {
       "name": "EspSparsnasGateway/valuesV2",
       "description": "watt",
       "pin": "V50"
