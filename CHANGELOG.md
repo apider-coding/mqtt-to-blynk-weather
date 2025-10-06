@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.14](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.13...v1.0.14) (2025-10-06)
+
+
+### Bug Fixes
+
+* add @opentelemetry/api ([427ab7f](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/427ab7fb2a2adb786771a146cf75f3e2939b5989))
+
 ### [1.0.13](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.12...v1.0.13) (2025-10-06)
 
 
