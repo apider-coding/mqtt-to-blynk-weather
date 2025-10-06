@@ -29,7 +29,7 @@
     {
       "name": "433/inFactory-TH/30/temperature_C",
       "description": "temperature",
-      "pin": "V14"
+      "pin": "V44"
     },
     {
       "name": "EspSparsnasGateway/valuesV2",
