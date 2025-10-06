@@ -2,12 +2,19 @@
 
 const winston = require('winston');
 
+// const logger = winston.createLogger({
+//   // level: 'debug',
+//   transports: [
+//     new winston.transports.Console({
+//       format: winston.format.combine(),
+//     })],
+// });
+
 const logger = winston.createLogger({
-  // level: 'debug',
+  level: 'info',
   transports: [
-    new winston.transports.Console({
-      format: winston.format.combine(),
-    })],
+    new winston.transports.Console(),
+  ],
 });
 
 // const logger = winston.createLogger({
