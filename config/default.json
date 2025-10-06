@@ -27,8 +27,8 @@
       "pin": "V23"
     },
     {
-      "name": "433/inFactory-TH/30/temerature_C",
-      "description": "temerature",
+      "name": "433/inFactory-TH/30/temperature_C",
+      "description": "temperature",
       "pin": "V14"
     },
     {
