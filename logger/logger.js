@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const pino = require('pino');
 
 module.exports = pino();
