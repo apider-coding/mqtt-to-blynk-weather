@@ -1,16 +1,14 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable no-console */
-const opentelemetry = require('@opentelemetry/api');
-
-const tracer = opentelemetry.trace.getTracer('my-service-tracer');
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const config = require('config');
+const opentelemetry = require('@opentelemetry/api');
 const logger = require('./logger/logger');
 
 const { convertToMS, parseSparsnasWatt } = require('./helpers');
 const { postBlynk } = require('./postBlynk');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+const tracer = opentelemetry.trace.getTracer('my-service-tracer');
 
 /**
  * Processes the data from topics according to config
@@ -21,9 +19,6 @@ const processData = async (client, topics) => {
   tracer.startActiveSpan('process data', async (parentSpan) => {
     await client.on('message', async (topic, message) => {
       const params = topics.filter((item) => topic === item.name);
-
-      // console.log('----', topic);
-      // check if topic include 'km_h' and convert to 'm/s'
       if (topic.includes('km_h')) {
         message = convertToMS(message);
       }
