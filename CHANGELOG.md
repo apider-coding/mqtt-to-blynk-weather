@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.23](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.22...v1.0.23) (2025-10-07)
+
+
+### Bug Fixes
+
+* cleanup ([7a71ffe](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/7a71ffe16259e5deba5c1dfd11b783495f39c96d))
+* cleanup ([4c0646d](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/4c0646de838cddf38a2b2fd769c4f64cf0acf737))
+* order ([cda13e3](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/cda13e3b172606c18c6ef178f746cdcc91f6f9bc))
+* remove node-fetch ([ce20afe](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/ce20afe8adc1b41a7ebf8e8f427df4727c5a1775))
+
 ### [1.0.22](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.21...v1.0.22) (2025-10-07)
 
 
