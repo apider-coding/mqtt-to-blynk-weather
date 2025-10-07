@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-unresolved
 const pino = require('pino');
 const { context, trace } = require('@opentelemetry/api');
 
