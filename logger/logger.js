@@ -1,18 +1,23 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const pino = require('pino');
+const { context, trace } = require('@opentelemetry/api');
 
-module.exports = pino();
+/**
+ * Mixin function for pino to add trace context to logs.
+ * @returns {object} An object containing trace_id and span_id if a span is active.
+ */
+const pinoMixin = () => {
+  const span = trace.getSpan(context.active());
+  if (!span) {
+    return {};
+  }
+  const { traceId, spanId } = span.spanContext();
+  return { trace_id: traceId, span_id: spanId };
+};
 
-// const logger = require('pino')();
+const logger = pino({
+  level: process.env.LOG_LEVEL || 'info',
+  mixin: pinoMixin,
+});
 
-// module.exports = logger;
-// const winston = require('winston');
-
-// const logger = winston.createLogger({
-//   level: 'info',
-//   transports: [
-//     new winston.transports.Console(),
-//   ],
-// });
-
-// module.exports = logger;
+module.exports = logger;
