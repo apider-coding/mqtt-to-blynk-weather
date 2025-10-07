@@ -8,8 +8,12 @@ const otelFormat = winston.format((info) => {
   const span = trace.getSpan(context.active());
   if (span) {
     const { traceId, spanId } = span.spanContext();
-    info.trace_id = traceId;
-    info.span_id = spanId;
+    // Create a shallow copy before adding properties
+    return {
+      ...info,
+      trace_id: traceId,
+      span_id: spanId,
+    };
   }
   return info;
 });
