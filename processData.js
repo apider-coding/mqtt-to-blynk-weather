@@ -8,7 +8,7 @@ const logger = require('./logger/logger');
 const { convertToMS, parseSparsnasWatt } = require('./helpers');
 const { postBlynk } = require('./postBlynk');
 
-const tracer = opentelemetry.trace.getTracer('my-service-tracer');
+const tracer = opentelemetry.trace.getTracer('mqtt-to-blynk-weather');
 
 /**
  * Processes the data from topics according to config
