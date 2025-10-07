@@ -20,12 +20,12 @@ const convertToMS = (item) => ((Number(item.toString()) * 1000) / 3600).toFixed(
  * @param {*} item Item to be processed
  * @returns {Number} Item converted to kW
  */
-const parseSparsnasWatt = (item) => {
-  const span2 = tracer.startSpan('convert-watt');
+const parseSparsnasWatt = (item) => tracer.startActiveSpan('convert-watt', (span) => {
   const msgJson = JSON.parse(item);
+  const result = (Number(msgJson.watt) / 1000).toFixed(2);
+  span.setAttribute('app.watt.value', result);
   logger.info({ message: 'converted watt for item' });
-  span2.end();
-  return (Number(msgJson.watt) / 1000).toFixed(2);
-};
+  return result;
+});
 
 module.exports = { convertToMS, parseSparsnasWatt };
