@@ -1,36 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
+const pino = require('pino');
 
-const winston = require('winston');
+module.exports = pino();
 
-// const logger = winston.createLogger({
-//   // level: 'debug',
-//   transports: [
-//     new winston.transports.Console({
-//       format: winston.format.combine(),
-//     })],
-// });
-
-const logger = winston.createLogger({
-  level: 'info',
-  transports: [
-    new winston.transports.Console(),
-  ],
-});
+// const winston = require('winston');
 
 // const logger = winston.createLogger({
-//   level: 'debug',
+//   level: 'info',
 //   transports: [
-//     new winston.transports.Console({
-//       format: winston.format.combine(
-//         winston.format.timestamp(),
-//         winston.format.json(),
-//       ),
-//       // format: winston.format.combine(
-//       //   winston.format.timestamp(),
-//       //   winston.format.splat(),
-//       //   winston.format.simple(),
-//       // ),
-//     })],
+//     new winston.transports.Console(),
+//   ],
 // });
 
-module.exports = logger;
+// module.exports = logger;
