@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.20](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.19...v1.0.20) (2025-10-07)
+
+
+### Bug Fixes
+
+* add pino logger ([7d96a4d](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/7d96a4dc17448de23db21a0cb3a3e6c18423a2d6))
+* packages ([6a6c214](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/6a6c214a8ca251f0f7ecfaa2ddc0ec541f5d85cf))
+* update node to 20 ([dc05e60](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/dc05e6069a19538fd1e174e293c344bf2e565d06))
+
 ### [1.0.19](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.18...v1.0.19) (2025-10-06)
 
 
