@@ -3,6 +3,9 @@ const pino = require('pino');
 
 module.exports = pino();
 
+// const logger = require('pino')();
+
+// module.exports = logger;
 // const winston = require('winston');
 
 // const logger = winston.createLogger({
