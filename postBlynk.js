@@ -1,7 +1,4 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-console */
 const axios = require('axios');
-// const { trace } = require('@opentelemetry/api');
 const logger = require('./logger/logger');
 /**
  * Post data to Blynk
