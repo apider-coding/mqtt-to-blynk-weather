@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.26](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.25...v1.0.26) (2025-10-07)
+
+
+### Bug Fixes
+
+* update logger ([98072bd](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/98072bd2df3b7b9a6c3c291005dd6b108cb9abce))
+
 ### [1.0.25](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.24...v1.0.25) (2025-10-07)
 
 
