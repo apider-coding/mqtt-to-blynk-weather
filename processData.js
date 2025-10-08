@@ -3,12 +3,12 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const config = require('config');
 const opentelemetry = require('@opentelemetry/api');
+
+const tracer = opentelemetry.trace.getTracer('mqtt-to-blynk-weather');
 const logger = require('./logger/logger');
 
 const { convertToMS, convertToKiloWatt } = require('./helpers');
 const { postBlynk } = require('./postBlynk');
-
-const tracer = opentelemetry.trace.getTracer('mqtt-to-blynk-weather');
 
 /**
  * Processes the data from topics according to config

@@ -36,57 +36,5 @@
       "description": "watt",
       "pin": "V50"
     }
-  ],
-  "topics_old": [
-    {
-      "name": "433/Hideki-Wind/7/wind_max_km_h",
-      "description": "windMax",
-      "pin": "V20"
-    },
-    {
-      "name": "433/Hideki-Wind/7/wind_avg_km_h",
-      "description": "windAvg",
-      "pin": "V21"
-    },
-    {
-      "name": "433/Hideki-Wind/7/wind_dir_deg",
-      "description": "windDeg",
-      "pin": "V22"
-    },
-    {
-      "name": "433/Cotech-367959/62/wind_max_m_s",
-      "description": "windMax",
-      "pin": "V20"
-    },
-    {
-      "name": "433/Cotech-367959/62/wind_avg_m_s",
-      "description": "windAvg",
-      "pin": "V21"
-    },
-    {
-      "name": "433/Cotech-367959/62/wind_dir_deg",
-      "description": "windDeg",
-      "pin": "V22"
-    },
-    {
-      "name": "433/Cotech-367959/64/humidity",
-      "description": "humidity",
-      "pin": "V23"
-    },
-    {
-      "name": "433/Cotech-367959/64/light_lux",
-      "description": "lux",
-      "pin": "V24"
-    },
-    {
-      "name": "433/Cotech-367959/64/uv",
-      "description": "uv",
-      "pin": "V25"
-    },
-    {
-      "name": "EspSparsnasGateway/valuesV2",
-      "description": "watt",
-      "pin": "V50"
-    }
   ]
 }
