@@ -16,7 +16,7 @@ const topics = config.get('topics');
  */
 tracer.startActiveSpan('app-startup', async (span) => {
   try {
-    logger.info({ message: 'Application starting up...' });
+    logger.info({ message: `${config.get('service.name')} starting up...` });
 
     await subscribeTopics(asyncClient, topics);
     processData(asyncClient, topics);
