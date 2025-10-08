@@ -17,7 +17,6 @@ const topics = config.get('topics');
 tracer.startActiveSpan('app-startup', async (span) => {
   try {
     logger.info({ message: 'Application starting up...' });
-    span.setAttribute('app.topics.count', topics.length);
 
     await subscribeTopics(asyncClient, topics);
     processData(asyncClient, topics);
