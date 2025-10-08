@@ -26,5 +26,5 @@ COPY --from=builder /app /app
 WORKDIR /app
 
 # Entrypoint with OTEL tracing
-CMD [ "node", "app.js" ]
+CMD [ "node", "server.js" ]
 # CMD [ "node", "-r", "./otel/tracing.js", "server.js" ]

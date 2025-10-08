@@ -13,7 +13,7 @@ Gets specified topic data (from config) and posts to Blynk Weather app
 ```mermaid
 graph TD
     subgraph Application
-        A[app.js]
+        A[server.js]
         B[connectMQTT.js]
         C[subscribeTopics.js]
         D[processData.js]

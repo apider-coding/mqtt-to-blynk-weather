@@ -54,6 +54,6 @@ const sdk = new opentelemetry.NodeSDK({
 
 sdk.start();
 
-// CMD [ "node", "-r", "./tracing.js", "app.js"]
+// CMD [ "node", "-r", "./tracing.js", "server.js"]
 // npm i @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-trace-otlp-proto @opentelemetry/resources @opentelemetry/semantic-conventions @opentelemetry/resource-detector-container @opentelemetry/resources @opentelemetry/api
 // https://github.com/open-telemetry/opentelemetry-demo/blob/main/src/paymentservice/opentelemetry.js
