@@ -1,13 +1,3 @@
-/**
- * @module
- */
-
-/**
- * Function that convert km/h to m/s
- * @param {*} item Item to be converted in km/h
- * @returns {Number} Item converted to m/s
- */
-
 const opentelemetry = require('@opentelemetry/api');
 const logger = require('./logger/logger');
 
