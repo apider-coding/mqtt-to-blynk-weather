@@ -5,6 +5,9 @@
   "blynk": {
     "url": "https://nas.home:9443"
   },
+  "service": {
+    "name": "mqtt-to-blynk-weather"
+  },
   "topics": [
     {
       "name": "433/Cotech-367959/62/wind_max_m_s",
