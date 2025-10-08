@@ -1,4 +1,7 @@
 {
+  "logger": {
+    "level": "info"
+  },
   "mqtt": {
     "broker": "tcp://mqtt.home:1883"
   },
