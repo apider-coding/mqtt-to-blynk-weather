@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.27](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.26...v1.0.27) (2025-10-08)
+
+
+### Bug Fixes
+
+* logging and function rename ([6608fe0](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/6608fe0960079b396dac9e32390fbf5a502fb3f2))
+* update winston ([4caca69](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/4caca69b550de4d5f884e1e8a90d21cbb56c0cb9))
+* winston logger with otel injection ([9744b4a](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/9744b4a6b9d3ad8fa130bafca752dfb86d6f90ff))
+
 ### [1.0.26](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.25...v1.0.26) (2025-10-07)
 
 
