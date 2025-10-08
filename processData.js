@@ -33,7 +33,7 @@ const processData = (client, topics) => {
 
         const dataUrl = `${config.get('blynk.url')}/${config.get('blynk.token')}/update/${params[0].pin}?value=${message.toString()}`;
 
-        await postBlynk(dataUrl);
+        await postBlynk(dataUrl, params[0].pin, message.toString());
       } catch (error) {
         span.recordException(error);
         span.setStatus({ code: opentelemetry.SpanStatusCode.ERROR, message: error.message });
