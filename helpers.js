@@ -1,5 +1,5 @@
 const opentelemetry = require('@opentelemetry/api');
-const { config } = require('winston');
+const config = require('config');
 const logger = require('./logger/logger');
 
 const tracer = opentelemetry.trace.getTracer(config.get('service.name'));
