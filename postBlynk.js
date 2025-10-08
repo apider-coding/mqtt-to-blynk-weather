@@ -13,8 +13,9 @@ const postBlynk = async (url, pin, value) => {
     });
     return true;
   } catch (err) {
-    logger.error({ message: err.message });
-    return err;
+    logger.error({ message: `Failed to post to Blynk: ${err.message}` });
+    // Throw the error so the calling function's catch block can handle it
+    throw err;
   }
 };
 
