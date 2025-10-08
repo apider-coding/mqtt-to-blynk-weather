@@ -6,16 +6,16 @@ const tracer = opentelemetry.trace.getTracer('mqtt-to-blynk-weather');
 const convertToMS = (item) => ((Number(item.toString()) * 1000) / 3600).toFixed(1);
 
 /**
- * Function return watt from message in kW
+ * Function return kilowatt from message in watt
  * @param {*} item Item to be processed
  * @returns {Number} Item converted to kW
  */
-const parseSparsnasWatt = (item) => tracer.startActiveSpan('convert-watt', (span) => {
+const convertToKiloWatt = (item) => tracer.startActiveSpan('convert-watt', (span) => {
   const msgJson = JSON.parse(item);
   const result = (Number(msgJson.watt) / 1000).toFixed(2);
-  span.setAttribute('app.watt.value', result);
-  logger.info({ message: 'converted watt for item' });
+  span.setAttribute('app.kilowatt.value', result);
+  logger.info({ message: 'converted to kW' });
   return result;
 });
 
-module.exports = { convertToMS, parseSparsnasWatt };
+module.exports = { convertToMS, convertToKiloWatt };

@@ -5,7 +5,7 @@ const config = require('config');
 const opentelemetry = require('@opentelemetry/api');
 const logger = require('./logger/logger');
 
-const { convertToMS, parseSparsnasWatt } = require('./helpers');
+const { convertToMS, convertToKiloWatt } = require('./helpers');
 const { postBlynk } = require('./postBlynk');
 
 const tracer = opentelemetry.trace.getTracer('mqtt-to-blynk-weather');
@@ -25,7 +25,7 @@ const processData = (client, topics) => {
           message = convertToMS(message);
         }
         if (topic.includes('EspSparsnasGateway/valuesV2')) {
-          message = parseSparsnasWatt(message);
+          message = convertToKiloWatt(message);
         }
 
         // This log will now have trace context
