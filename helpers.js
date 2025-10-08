@@ -15,6 +15,7 @@ const convertToKiloWatt = (item) => tracer.startActiveSpan('convert-watt', (span
   const result = (Number(msgJson.watt) / 1000).toFixed(2);
   span.setAttribute('app.kilowatt.value', result);
   logger.info({ message: 'converted to kW' });
+  span.end();
   return result;
 });
 
