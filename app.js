@@ -14,7 +14,7 @@ const topics = config.get('topics');
 /**
  * Start up
  */
-tracer.startActiveSpan('app-startup', async (span) => {
+tracer.startActiveSpan(`${config.get('service.name')} start up`, async (span) => {
   try {
     logger.info({ message: `${config.get('service.name')} starting up...` });
 
