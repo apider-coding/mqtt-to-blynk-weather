@@ -4,6 +4,8 @@
 
 // const logger = require('pino')();
 // module.exports = logger;
+// eslint-disable-next-line no-unused-vars, import/no-extraneous-dependencies
+const { OpenTelemetryTransportV3 } = require('@opentelemetry/winston-transport');
 
 const winston = require('winston');
 
@@ -11,6 +13,7 @@ const logger = winston.createLogger({
   level: 'info',
   transports: [
     new winston.transports.Console(),
+    new OpenTelemetryTransportV3(),
   ],
 });
 
