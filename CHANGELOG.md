@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.45](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.44...v1.0.45) (2025-10-16)
+
+
+### Bug Fixes
+
+* update logger with OpenTelemetryTransportV3 ([b77fadd](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/b77fadd8b2290df7eee190f7a37f78b3a124a715))
+
 ### [1.0.44](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.43...v1.0.44) (2025-10-16)
 
 ### [1.0.43](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.42...v1.0.43) (2025-10-16)
