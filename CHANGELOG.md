@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.46](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.45...v1.0.46) (2025-11-27)
+
+
+### Bug Fixes
+
+* swap sensors for temp & humidity ([60fefcb](https://github.com/apider-coding/mqtt-to-blynk-weather/commit/60fefcb2cf54356a61b4ba49a7a62a936fad6f24))
+
 ### [1.0.45](https://github.com/apider-coding/mqtt-to-blynk-weather/compare/v1.0.44...v1.0.45) (2025-10-16)
 
 
