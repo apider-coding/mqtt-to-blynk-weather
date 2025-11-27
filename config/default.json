@@ -28,12 +28,12 @@
       "pin": "V22"
     },
     {
-      "name": "433/inFactory-TH/30/humidity",
+      "name": "433/Cotech-367959/62/humidity",
       "description": "humidity",
       "pin": "V23"
     },
     {
-      "name": "433/inFactory-TH/30/temperature_C",
+      "name": "433/Cotech-367959/62/temperature_C",
       "description": "temperature",
       "pin": "V44"
     },
