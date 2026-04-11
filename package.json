@@ -1,6 +1,6 @@
 {
   "name": "mqtt-to-blynk-weather",
-  "version": "1.0.52",
+  "version": "1.0.53",
   "description": "",
   "main": "server.js",
   "scripts": {
