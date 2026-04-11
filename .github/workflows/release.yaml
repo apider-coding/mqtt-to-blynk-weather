@@ -6,12 +6,13 @@ on:
       - "v*"
 
 env:
-  NODE_ENV: production
   DOCKER_API_VERSION: "1.43"
 
 jobs:
   lint:
     runs-on: [self-hosted]
+    env:
+      NODE_ENV: development
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -19,18 +20,20 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 22
 
       - name: Install code
         run: npm ci
 
       - name: Run ESLint
         run: |
-          ./node_modules/eslint/bin/eslint.js *.js
+          npx eslint *.js
 
   Release:
     needs: lint
     runs-on: [self-hosted]
+    env:
+      NODE_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v3
