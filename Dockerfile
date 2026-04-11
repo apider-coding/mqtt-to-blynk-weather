@@ -1,5 +1,5 @@
 # Get node image via internal Artifactory7 repo
-FROM node:22-slim as builder
+FROM node:22-slim AS builder
 
 # Set timezone
 RUN cp -r -f /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
