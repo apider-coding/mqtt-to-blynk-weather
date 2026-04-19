@@ -1,4 +1,9 @@
 {
+  "mqtt": {
+    "broker": "MQTT_BROKER",
+    "reconnectPeriodMs": "MQTT_RECONNECT_PERIOD_MS",
+    "connectTimeoutMs": "MQTT_CONNECT_TIMEOUT_MS"
+  },
   "blynk": {
     "token": "BLYNKTOKEN"
   }

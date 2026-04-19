@@ -18,10 +18,10 @@ tracer.startActiveSpan(`${config.get('service.name')} start up`, async (span) =>
   try {
     logger.info({ message: `${config.get('service.name')} starting up...` });
 
-    await subscribeTopics(asyncClient, topics);
     processData(asyncClient, topics);
+    subscribeTopics(asyncClient, topics);
 
-    logger.info({ message: 'MQTT topic listener started successfully' });
+    logger.info({ message: 'MQTT topic listener initialized' });
     span.setStatus({ code: opentelemetry.SpanStatusCode.OK });
   } catch (error) {
     logger.error({ message: 'Application startup failed', error });

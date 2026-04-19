@@ -3,7 +3,9 @@
     "level": "info"
   },
   "mqtt": {
-    "broker": "tcp://mqtt.home:1883"
+    "broker": "tcp://mqtt.home:1883",
+    "reconnectPeriodMs": 5000,
+    "connectTimeoutMs": 30000
   },
   "blynk": {
     "url": "https://nas.home:9443"
